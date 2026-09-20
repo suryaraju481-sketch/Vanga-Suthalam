@@ -1,0 +1,1303 @@
+/* =========================================================
+   VANGA SUTHALAM - DESTINATIONS PAGE
+   Professional Ocean Blue Theme
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.destinations-page {
+  min-height: 100vh;
+  background: #f4f9fc;
+  color: #12384d;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.destination-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 76px;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(15px);
+
+  border-bottom: 1px solid rgba(9, 104, 143, 0.12);
+
+  box-shadow: 0 4px 20px rgba(0, 70, 100, 0.08);
+}
+
+/* LOGO */
+
+.destination-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #056b91;
+
+  font-size: 20px;
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+.destination-logo:first-letter {
+  font-size: 25px;
+}
+
+/* NAV LINKS */
+
+.destination-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.destination-nav-links button,
+.destination-nav-actions button,
+.footer-links button {
+  border: none;
+  background: transparent;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.destination-nav-links button {
+  color: #496777;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.destination-nav-links button:hover {
+  color: #057da7;
+  background: #eef9fd;
+}
+
+.destination-nav-links button.active {
+  color: #057da7;
+  background: #e7f7fc;
+}
+
+/* NAV ACTIONS */
+
+.destination-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-nav-btn {
+  color: #056b91 !important;
+  padding: 10px 16px;
+}
+
+.login-nav-btn:hover {
+  background: #eef8fc !important;
+  border-radius: 8px;
+}
+
+.register-nav-btn {
+  padding: 10px 18px !important;
+
+  color: white !important;
+
+  background: #087ea4 !important;
+
+  border-radius: 9px;
+}
+
+.register-nav-btn:hover {
+  background: #056b8c !important;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.destinations-hero {
+  position: relative;
+
+  min-height: 590px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 120px 6% 70px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 38, 61, 0.88),
+      rgba(3, 82, 111, 0.68),
+      rgba(0, 129, 166, 0.42)
+    ),
+    url("/image.png") center/cover no-repeat;
+
+  overflow: hidden;
+}
+
+.destinations-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 75% 40%,
+      rgba(71, 207, 244, 0.22),
+      transparent 35%
+    );
+}
+
+.destinations-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1150px;
+
+  color: white;
+}
+
+.hero-small-title {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: #a8eaff;
+}
+
+.destinations-hero h1 {
+  max-width: 760px;
+
+  margin: 0 0 18px;
+
+  font-size: clamp(42px, 6vw, 72px);
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+}
+
+.destinations-hero h1 span {
+  color: #73ddff;
+}
+
+.destinations-hero p {
+  max-width: 670px;
+
+  margin: 0 0 30px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-primary-btn,
+.hero-secondary-btn {
+  padding: 14px 23px;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.hero-primary-btn {
+  border: none;
+
+  color: #064965;
+
+  background: white;
+}
+
+.hero-primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.hero-secondary-btn {
+  border: 1px solid rgba(255, 255, 255, 0.65);
+
+  color: white;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(5px);
+}
+
+.hero-secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.destination-status {
+  min-height: 350px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px 20px;
+
+  text-align: center;
+}
+
+.destination-status h3 {
+  margin: 15px 0 7px;
+
+  color: #174b64;
+
+  font-size: 22px;
+}
+
+.destination-status p {
+  margin: 0;
+
+  color: #6d8794;
+}
+
+.loading-spinner {
+  width: 46px;
+  height: 46px;
+
+  border: 4px solid #dceff5;
+  border-top-color: #087ea4;
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-status {
+  color: #b42318;
+}
+
+.error-icon {
+  font-size: 40px;
+}
+
+.error-status button {
+  margin-top: 20px;
+
+  padding: 12px 22px;
+
+  border: none;
+  border-radius: 9px;
+
+  color: white;
+  background: #087ea4;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   COMMON SECTION
+   ========================================================= */
+
+.destination-section,
+.island-section {
+  padding: 85px 6%;
+}
+
+.destination-section {
+  background: #f8fcfe;
+}
+
+.section-heading {
+  max-width: 800px;
+
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+.section-heading > span {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #087ea4;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+}
+
+.section-heading h2 {
+  margin: 0 0 13px;
+
+  color: #103f56;
+
+  font-size: clamp(30px, 4vw, 43px);
+
+  line-height: 1.15;
+}
+
+.section-heading p {
+  margin: 0 auto;
+
+  max-width: 680px;
+
+  color: #6a8491;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   DESTINATION GRID
+   ========================================================= */
+
+.destination-grid {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+/* =========================================================
+   DESTINATION CARD
+   ========================================================= */
+
+.destination-card {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: white;
+
+  border: 1px solid #e2eef3;
+
+  box-shadow:
+    0 8px 28px rgba(15, 80, 105, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 18px 40px rgba(15, 80, 105, 0.15);
+}
+
+/* =========================================================
+   CARD IMAGE
+   ========================================================= */
+
+.destination-image {
+  position: relative;
+
+  height: 230px;
+
+  overflow: hidden;
+
+  background: #dff3f9;
+}
+
+.destination-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.45s ease;
+}
+
+.destination-card:hover
+.destination-image img {
+  transform: scale(1.06);
+}
+
+/* DESTINATION TYPE */
+
+.destination-type-badge {
+  position: absolute;
+
+  top: 15px;
+  left: 15px;
+
+  padding: 7px 11px;
+
+  border-radius: 20px;
+
+  color: #07516e;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  font-size: 12px;
+  font-weight: 800;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================================
+   CARD BODY
+   ========================================================= */
+
+.destination-card-body {
+  padding: 23px;
+}
+
+.destination-card-body h3 {
+  margin: 0 0 8px;
+
+  color: #123f55;
+
+  font-size: 22px;
+
+  line-height: 1.25;
+}
+
+.destination-location {
+  margin: 0 0 13px;
+
+  color: #087ea4;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.destination-description {
+  min-height: 76px;
+
+  margin: 0 0 17px;
+
+  color: #6a7f8a;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* INFO */
+
+.destination-info {
+  display: flex;
+
+  align-items: center;
+
+  margin-bottom: 18px;
+
+  padding: 9px 11px;
+
+  border-radius: 8px;
+
+  color: #416777;
+
+  background: #f0f8fb;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   NORMAL EXPLORE BUTTON
+   ========================================================= */
+
+.destination-explore-btn {
+  width: 100%;
+
+  padding: 13px 18px;
+
+  border: none;
+  border-radius: 10px;
+
+  color: white;
+
+  background: #087ea4;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.destination-explore-btn:hover {
+  background: #056b8c;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   ISLAND SECTION
+   ========================================================= */
+
+.island-section {
+  position: relative;
+
+  background:
+    linear-gradient(
+      180deg,
+      #eef9fd 0%,
+      #f8fcfe 100%
+    );
+}
+
+.island-heading h2 {
+  color: #073e5a;
+}
+
+/* =========================================================
+   ISLAND NOTICE
+   ========================================================= */
+
+.island-notice {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto 40px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 18px;
+
+  padding: 22px 25px;
+
+  border: 1px solid #c7e7f1;
+
+  border-left: 5px solid #087ea4;
+
+  border-radius: 14px;
+
+  background: white;
+
+  box-shadow:
+    0 8px 25px rgba(9, 91, 119, 0.07);
+}
+
+.notice-icon {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #e8f7fc;
+
+  font-size: 22px;
+}
+
+.island-notice h3 {
+  margin: 0 0 7px;
+
+  color: #164961;
+
+  font-size: 18px;
+}
+
+.island-notice p {
+  margin: 0;
+
+  color: #6b818c;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   ISLAND CARD
+   ========================================================= */
+
+.island-card {
+  border-color: #d5eaf1;
+}
+
+.island-card:hover {
+  border-color: #9bd4e5;
+}
+
+/* ISLAND IMAGE BADGE */
+
+.island-badge {
+  color: #07516e;
+}
+
+/* =========================================================
+   APPROVAL BADGE
+   ========================================================= */
+
+.approval-badge {
+  position: absolute;
+
+  right: 14px;
+  bottom: 14px;
+
+  padding: 8px 12px;
+
+  border-radius: 20px;
+
+  color: #7a5600;
+
+  background: rgba(255, 249, 226, 0.96);
+
+  border: 1px solid #f0d78b;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   ISLAND STATUS
+   ========================================================= */
+
+.island-status-box {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+  margin-bottom: 17px;
+}
+
+.island-status-box > div {
+  min-width: 0;
+
+  padding: 11px;
+
+  border-radius: 9px;
+
+  background: #f4fafc;
+
+  border: 1px solid #e2eff3;
+}
+
+.status-label {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #8199a3;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+.island-status-box strong {
+  display: block;
+
+  color: #21657d;
+
+  font-size: 12px;
+
+  line-height: 1.35;
+}
+
+/* =========================================================
+   ISLAND APPROVAL BUTTON
+   ========================================================= */
+
+.island-approval-btn {
+  width: 100%;
+
+  padding: 13px 18px;
+
+  border: 1px solid #087ea4;
+
+  border-radius: 10px;
+
+  color: white;
+
+  background: #087ea4;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.island-approval-btn:hover {
+  background: #056b8c;
+
+  border-color: #056b8c;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 18px rgba(8, 126, 164, 0.22);
+}
+
+/* =========================================================
+   EMPTY DESTINATIONS
+   ========================================================= */
+
+.empty-destinations {
+  width: 100%;
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  padding: 35px;
+
+  border: 1px dashed #b9d8e3;
+
+  border-radius: 14px;
+
+  color: #6c8590;
+
+  background: white;
+
+  text-align: center;
+}
+
+/* =========================================================
+   SAFETY SECTION
+   ========================================================= */
+
+.safety-section {
+  padding: 85px 6%;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      110deg,
+      #063c58,
+      #087ea4
+    );
+}
+
+.safety-content {
+  width: 100%;
+  max-width: 1150px;
+
+  margin: 0 auto;
+}
+
+.safety-label {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #9ce9ff;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.safety-content h2 {
+  margin: 0 0 14px;
+
+  font-size: clamp(30px, 4vw, 44px);
+}
+
+.safety-content > p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.84);
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+/* SAFETY GRID */
+
+.safety-grid {
+  margin-top: 38px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 17px;
+}
+
+.safety-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 18px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.14);
+
+  border-radius: 13px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+}
+
+.safety-item > span {
+  font-size: 24px;
+}
+
+.safety-item strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 14px;
+}
+
+.safety-item small {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.destination-cta {
+  width: 100%;
+
+  padding: 70px 6%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
+
+  background: white;
+}
+
+.destination-cta > div {
+  max-width: 720px;
+}
+
+.destination-cta span {
+  color: #087ea4;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.destination-cta h2 {
+  margin: 8px 0 10px;
+
+  color: #103f56;
+
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+.destination-cta p {
+  margin: 0;
+
+  color: #708590;
+
+  line-height: 1.7;
+}
+
+.destination-cta button {
+  flex-shrink: 0;
+
+  padding: 14px 23px;
+
+  border: none;
+  border-radius: 10px;
+
+  color: white;
+
+  background: #087ea4;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.destination-cta button:hover {
+  background: #056b8c;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(8, 126, 164, 0.2);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.destination-footer {
+  padding: 45px 6% 25px;
+
+  text-align: center;
+
+  color: white;
+
+  background: #062f45;
+}
+
+.footer-logo {
+  margin-bottom: 10px;
+
+  color: #8fe7ff;
+
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.destination-footer > p {
+  margin: 0 auto 20px;
+
+  max-width: 500px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 25px;
+
+  margin-bottom: 25px;
+}
+
+.footer-links button {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-links button:hover {
+  color: #8fe7ff;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.1);
+
+  color: rgba(255, 255, 255, 0.45);
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .destination-navbar {
+    padding: 0 4%;
+  }
+
+  .destination-nav-links {
+    gap: 2px;
+  }
+
+  .destination-nav-links button {
+    padding: 9px 9px;
+  }
+
+  .destination-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .safety-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .destination-navbar {
+    height: 70px;
+
+    padding: 0 18px;
+  }
+
+  .destination-logo {
+    font-size: 16px;
+  }
+
+  .destination-nav-links {
+    display: none;
+  }
+
+  .destination-nav-actions {
+    gap: 5px;
+  }
+
+  .login-nav-btn {
+    padding: 8px 9px !important;
+  }
+
+  .register-nav-btn {
+    padding: 9px 12px !important;
+  }
+
+  /* HERO */
+
+  .destinations-hero {
+    min-height: 540px;
+
+    padding:
+      100px 22px 55px;
+
+    background-position: center;
+  }
+
+  .destinations-hero h1 {
+    font-size: 43px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .destinations-hero p {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    max-width: 320px;
+  }
+
+  /* SECTIONS */
+
+  .destination-section,
+  .island-section {
+    padding:
+      65px 18px;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .section-heading h2 {
+    font-size: 31px;
+  }
+
+  .section-heading p {
+    font-size: 14px;
+  }
+
+  /* GRID */
+
+  .destination-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .destination-image {
+    height: 220px;
+  }
+
+  /* NOTICE */
+
+  .island-notice {
+    flex-direction: column;
+
+    padding: 19px;
+
+    margin-bottom: 30px;
+  }
+
+  /* STATUS */
+
+  .island-status-box {
+    grid-template-columns: 1fr;
+  }
+
+  /* SAFETY */
+
+  .safety-section {
+    padding:
+      65px 18px;
+  }
+
+  .safety-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  /* CTA */
+
+  .destination-cta {
+    padding:
+      60px 20px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .destination-cta button {
+    width: 100%;
+  }
+
+  /* FOOTER */
+
+  .destination-footer {
+    padding:
+      40px 20px 22px;
+  }
+
+  .footer-links {
+    gap: 15px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+  .destination-logo span {
+    display: none;
+  }
+
+  .destination-nav-actions {
+    margin-left: auto;
+  }
+
+  .destinations-hero h1 {
+    font-size: 37px;
+  }
+
+  .hero-small-title {
+    font-size: 10px;
+    letter-spacing: 1.2px;
+  }
+
+  .destination-card-body {
+    padding: 20px;
+  }
+
+  .destination-card-body h3 {
+    font-size: 20px;
+  }
+
+  .destination-image {
+    height: 205px;
+  }
+
+  .approval-badge {
+    right: 10px;
+    bottom: 10px;
+
+    font-size: 10px;
+
+    padding: 7px 9px;
+  }
+}

@@ -1,0 +1,1658 @@
+/* =========================================================
+   VANGA SUTHALAM
+   REGISTER PAGE
+   Professional Ocean / Blue Theme
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+}
+
+
+/* =========================================================
+   MAIN REGISTER PAGE
+========================================================= */
+
+.register-page {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.register-background {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("/image.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -3;
+}
+
+
+.register-overlay {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 48, 102, 0.82) 0%,
+            rgba(0, 84, 145, 0.68) 38%,
+            rgba(0, 119, 181, 0.45) 70%,
+            rgba(0, 89, 150, 0.55) 100%
+        );
+
+    z-index: -2;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.register-navbar {
+    width: 100%;
+    height: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5.5%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #004d94,
+            #006dbb,
+            #0086d5
+        );
+
+    position: relative;
+    z-index: 100;
+
+    box-shadow:
+        0 5px 25px rgba(0, 34, 70, 0.28);
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.register-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+
+.brand-anchor {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    border:
+        2px solid rgba(255, 255, 255, 0.75);
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.15);
+
+    transition: 0.25s ease;
+}
+
+
+.register-brand:hover .brand-anchor {
+    transform: rotate(-5deg) scale(1.04);
+}
+
+
+.brand-details {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.brand-details h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    line-height: 1.05;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+
+.brand-details span {
+    margin-top: 6px;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 9px;
+
+    letter-spacing: 2.4px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.register-navigation {
+    display: flex;
+    align-items: center;
+
+    gap: 34px;
+}
+
+
+.register-navigation a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.register-navigation a:hover {
+    color: #a9edff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.navbar-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-width: 125px;
+
+    padding: 12px 26px;
+
+    border:
+        2px solid rgba(255, 255, 255, 0.95);
+
+    border-radius: 30px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition: all 0.25s ease;
+}
+
+
+.navbar-login:hover {
+    background: #ffffff;
+
+    color: #006bb6;
+
+    transform: translateY(-2px);
+}
+
+
+.login-person {
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.register-main {
+    width: 100%;
+
+    min-height:
+        calc(100vh - 105px);
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(540px, 650px);
+
+    gap: 55px;
+
+    align-items: center;
+
+    padding:
+        65px 5.5% 75px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.register-left {
+    max-width: 720px;
+
+    padding:
+        15px 0 15px;
+}
+
+
+.welcome-label {
+    margin-bottom: 18px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+.register-left h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size:
+        clamp(52px, 5.2vw, 78px);
+
+    line-height: 0.98;
+
+    font-weight: 900;
+
+    letter-spacing: -2.5px;
+
+    text-shadow:
+        0 5px 22px rgba(0, 0, 0, 0.22);
+}
+
+
+.register-left h1 span {
+    color: #91eaff;
+}
+
+
+.register-intro {
+    max-width: 690px;
+
+    margin:
+        30px 0 38px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    line-height: 1.75;
+
+    font-weight: 400;
+
+    text-shadow:
+        0 2px 7px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.feature {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 20px;
+}
+
+
+.feature-icon {
+    width: 65px;
+    height: 65px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border:
+        2px solid rgba(255, 255, 255, 0.85);
+
+    font-size: 26px;
+
+    box-shadow:
+        0 7px 24px rgba(0, 0, 0, 0.20);
+}
+
+
+.feature-blue {
+    background: #159fe8;
+}
+
+
+.feature-green {
+    background: #09c69d;
+}
+
+
+.feature-purple {
+    background: #6658e9;
+}
+
+
+.feature-content h3 {
+    margin: 0 0 4px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 800;
+}
+
+
+.feature-content p {
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.9);
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   ADVENTURE
+========================================================= */
+
+.adventure {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 28px;
+}
+
+
+.adventure-line {
+    width: 4px;
+    height: 50px;
+
+    border-radius: 10px;
+
+    background: #85e8ff;
+}
+
+
+.adventure span {
+    display: block;
+
+    color:
+        rgba(255, 255, 255, 0.8);
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+
+.adventure strong {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.register-right {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   REGISTER CARD
+========================================================= */
+
+.register-card {
+    width: 100%;
+
+    padding:
+        36px 40px 34px;
+
+    border-radius: 24px;
+
+    background:
+        rgba(248, 252, 255, 0.95);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 25px 70px rgba(0, 35, 70, 0.35);
+
+    backdrop-filter: blur(16px);
+
+    -webkit-backdrop-filter: blur(16px);
+
+    color: #153f5d;
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.card-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    margin-bottom: 25px;
+}
+
+
+.card-user-icon {
+    width: 68px;
+    height: 68px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #09a9ed,
+            #0075c5
+        );
+
+    border:
+        3px solid rgba(0, 151, 225, 0.22);
+
+    color: #ffffff;
+
+    font-size: 30px;
+
+    box-shadow:
+        0 7px 22px rgba(0, 115, 190, 0.25);
+}
+
+
+.card-heading h2 {
+    margin: 0;
+
+    color: #073e70;
+
+    font-size: 32px;
+
+    line-height: 1.1;
+
+    font-weight: 900;
+}
+
+
+.card-heading p {
+    margin: 5px 0 0;
+
+    color: #55748a;
+
+    font-size: 14px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   SUCCESS BOX
+========================================================= */
+
+.success-box {
+    width: 100%;
+
+    margin-bottom: 18px;
+
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    background: #ecfff5;
+
+    border:
+        1px solid #9be1bd;
+
+    color: #08713d;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ERROR BOX
+========================================================= */
+
+.error-box {
+    width: 100%;
+
+    margin-bottom: 18px;
+
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    background: #fff0f0;
+
+    border:
+        1px solid #ffc3c3;
+
+    color: #a52d2d;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+    width: 100%;
+
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #183f59;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15px;
+}
+
+
+/* =========================================================
+   TWO COLUMN FORM
+========================================================= */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   INPUT CONTAINER
+========================================================= */
+
+.input-container {
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   IMPORTANT:
+   HIDE INPUT ICONS
+========================================================= */
+
+.input-symbol {
+    display: none !important;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.input-container input {
+    width: 100%;
+
+    height: 56px;
+
+    display: block;
+
+    padding:
+        0 17px;
+
+    border:
+        1.5px solid #cbdde9;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #123d5b;
+
+    /*
+       IMPORTANT:
+       Larger typed text
+    */
+
+    font-family:
+        "Poppins",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.1px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* =========================================================
+   INPUT PLACEHOLDER
+========================================================= */
+
+.input-container input::placeholder {
+    color: #7895aa;
+
+    opacity: 1;
+
+    font-size: 16px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   INPUT FOCUS
+========================================================= */
+
+.input-container input:focus {
+    border-color: #08a8e9;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(8, 168, 233, 0.12);
+}
+
+
+/* =========================================================
+   INPUT DISABLED
+========================================================= */
+
+.input-container input:disabled {
+    cursor: not-allowed;
+
+    background: #f4f8fa;
+
+    opacity: 0.8;
+}
+
+
+/* =========================================================
+   PASSWORD
+========================================================= */
+
+.input-container input[type="password"],
+.input-container input[type="text"] {
+    font-size: 18px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   HIDE EYE ICON
+========================================================= */
+
+.eye-button {
+    display: none !important;
+}
+
+
+/* =========================================================
+   TEXTAREA CONTAINER
+========================================================= */
+
+.textarea-container {
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   HIDE ADDRESS ICON
+========================================================= */
+
+.textarea-symbol {
+    display: none !important;
+}
+
+
+/* =========================================================
+   ADDRESS TEXTAREA
+========================================================= */
+
+.textarea-container textarea {
+    width: 100%;
+
+    min-height: 100px;
+
+    display: block;
+
+    padding:
+        14px 17px;
+
+    resize: vertical;
+
+    border:
+        1.5px solid #cbdde9;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #123d5b;
+
+    font-family:
+        "Poppins",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    line-height: 1.55;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   TEXTAREA PLACEHOLDER
+========================================================= */
+
+.textarea-container textarea::placeholder {
+    color: #7895aa;
+
+    opacity: 1;
+
+    font-size: 16px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   TEXTAREA FOCUS
+========================================================= */
+
+.textarea-container textarea:focus {
+    border-color: #08a8e9;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(8, 168, 233, 0.12);
+}
+
+
+/* =========================================================
+   TEXTAREA DISABLED
+========================================================= */
+
+.textarea-container textarea:disabled {
+    cursor: not-allowed;
+
+    background: #f4f8fa;
+
+    opacity: 0.8;
+}
+
+
+/* =========================================================
+   PASSWORD STRENGTH
+========================================================= */
+
+.password-strength {
+    margin-top: 8px;
+
+    width: 100%;
+}
+
+
+.strength-bars {
+    width: 100%;
+
+    display: flex;
+
+    gap: 5px;
+
+    margin-bottom: 6px;
+}
+
+
+.strength-bars span {
+    height: 4px;
+
+    flex: 1;
+
+    border-radius: 10px;
+
+    background: #d9e4eb;
+
+    transition:
+        background 0.25s ease;
+}
+
+
+.strength-bars span.filled {
+    background: #19a86d;
+}
+
+
+/* =========================================================
+   STRENGTH LEVELS
+========================================================= */
+
+.strength-bars span.filled.strength-1,
+.strength-bars span.filled.strength-2 {
+    background: #ef5350;
+}
+
+
+.strength-bars span.filled.strength-3 {
+    background: #f2a900;
+}
+
+
+.strength-bars span.filled.strength-4 {
+    background: #1eaf73;
+}
+
+
+.strength-bars span.filled.strength-5 {
+    background: #008f62;
+}
+
+
+/* =========================================================
+   STRENGTH RESULT
+========================================================= */
+
+.strength-result {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    font-size: 11px;
+}
+
+
+.strength-result span {
+    color: #718999;
+
+    font-weight: 500;
+}
+
+
+.strength-result strong {
+    color: #16875c;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   TERMS
+========================================================= */
+
+.terms {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin:
+        3px 0 20px;
+}
+
+
+.terms input {
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+
+    margin-top: 2px;
+
+    accent-color: #0086d1;
+
+    cursor: pointer;
+}
+
+
+.terms p {
+    margin: 0;
+
+    color: #617b8d;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.terms a {
+    color: #0074bd;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   CREATE ACCOUNT BUTTON
+========================================================= */
+
+.create-account {
+    width: 100%;
+
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0075c9,
+            #009fe8
+        );
+
+    color: #ffffff;
+
+    font-family:
+        "Poppins",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 9px 25px
+        rgba(0, 124, 204, 0.27);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+.create-account:hover:not(:disabled) {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 13px 30px
+        rgba(0, 124, 204, 0.35);
+}
+
+
+.create-account:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+
+.create-account:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   LOGIN LINK
+========================================================= */
+
+.already-account {
+    text-align: center;
+
+    margin-top: 19px;
+
+    color: #617b8c;
+
+    font-size: 14px;
+}
+
+
+.already-account a {
+    margin-left: 6px;
+
+    color: #0075bf;
+
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+
+.already-account a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   LOADING SPINNER
+========================================================= */
+
+.spinner {
+    width: 18px;
+    height: 18px;
+
+    display: inline-block;
+
+    border:
+        2px solid
+        rgba(255, 255, 255, 0.4);
+
+    border-top-color: #ffffff;
+
+    border-radius: 50%;
+
+    animation:
+        registerSpin 0.7s linear infinite;
+}
+
+
+@keyframes registerSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.register-footer {
+    min-height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        15px 5.5%;
+
+    background:
+        rgba(0, 42, 82, 0.90);
+
+    color:
+        rgba(255, 255, 255, 0.85);
+
+    font-size: 12px;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+.register-footer span {
+    display: inline-block;
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .register-main {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(500px, 620px);
+
+        gap: 35px;
+
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+
+    .register-left h1 {
+        font-size: 60px;
+    }
+
+
+    .register-intro {
+        font-size: 16px;
+    }
+
+
+    .register-navigation {
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 950px
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .register-navbar {
+        height: auto;
+
+        min-height: 90px;
+
+        padding:
+            15px 4%;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+
+    .register-navigation {
+        display: none;
+    }
+
+
+    .navbar-login {
+        margin-left: auto;
+    }
+
+
+    .register-main {
+        min-height: auto;
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding:
+            50px 5% 65px;
+    }
+
+
+    .register-left {
+        max-width: 750px;
+
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+
+    .register-intro {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .feature {
+        justify-content: center;
+
+        text-align: left;
+    }
+
+
+    .adventure {
+        justify-content: center;
+
+        text-align: left;
+    }
+
+
+    .register-right {
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 700px
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .register-navbar {
+        padding:
+            14px 20px;
+    }
+
+
+    .brand-anchor {
+        width: 50px;
+        height: 50px;
+
+        font-size: 24px;
+    }
+
+
+    .brand-details h2 {
+        font-size: 17px;
+    }
+
+
+    .brand-details span {
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .navbar-login {
+        min-width: 100px;
+
+        padding:
+            10px 18px;
+
+        font-size: 13px;
+    }
+
+
+    .register-main {
+        padding:
+            40px 18px 55px;
+    }
+
+
+    .register-left h1 {
+        font-size: 50px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .welcome-label {
+        font-size: 12px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .register-intro {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .register-card {
+        padding:
+            28px 22px;
+
+        border-radius: 20px;
+    }
+
+
+    .card-user-icon {
+        width: 60px;
+        height: 60px;
+
+        font-size: 27px;
+    }
+
+
+    .card-heading h2 {
+        font-size: 28px;
+    }
+
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    .input-container input {
+        height: 55px;
+
+        font-size: 17px;
+    }
+
+
+    .input-container input::placeholder {
+        font-size: 15px;
+    }
+
+
+    .textarea-container textarea {
+        font-size: 17px;
+    }
+
+
+    .textarea-container textarea::placeholder {
+        font-size: 15px;
+    }
+
+
+    .register-footer {
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 5px;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 450px
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .register-brand {
+        gap: 9px;
+    }
+
+
+    .brand-anchor {
+        width: 45px;
+        height: 45px;
+
+        font-size: 21px;
+    }
+
+
+    .brand-details h2 {
+        font-size: 15px;
+    }
+
+
+    .brand-details span {
+        display: none;
+    }
+
+
+    .navbar-login {
+        min-width: 85px;
+
+        padding:
+            9px 15px;
+
+        font-size: 12px;
+    }
+
+
+    .register-main {
+        padding:
+            30px 14px 45px;
+    }
+
+
+    .register-left h1 {
+        font-size: 42px;
+    }
+
+
+    .register-intro {
+        font-size: 14px;
+    }
+
+
+    .feature-icon {
+        width: 55px;
+        height: 55px;
+
+        font-size: 22px;
+    }
+
+
+    .feature-content h3 {
+        font-size: 16px;
+    }
+
+
+    .feature-content p {
+        font-size: 12px;
+    }
+
+
+    .register-card {
+        padding:
+            24px 17px;
+    }
+
+
+    .card-heading {
+        gap: 12px;
+    }
+
+
+    .card-user-icon {
+        width: 54px;
+        height: 54px;
+
+        font-size: 24px;
+    }
+
+
+    .card-heading h2 {
+        font-size: 25px;
+    }
+
+
+    .card-heading p {
+        font-size: 12px;
+    }
+
+
+    .input-container input {
+        height: 52px;
+
+        font-size: 16px;
+    }
+
+
+    .input-container input::placeholder {
+        font-size: 14px;
+    }
+
+
+    .textarea-container textarea {
+        font-size: 16px;
+    }
+
+
+    .textarea-container textarea::placeholder {
+        font-size: 14px;
+    }
+
+
+    .create-account {
+        height: 53px;
+
+        font-size: 14px;
+    }
+
+
+    .already-account {
+        font-size: 13px;
+    }
+
+}

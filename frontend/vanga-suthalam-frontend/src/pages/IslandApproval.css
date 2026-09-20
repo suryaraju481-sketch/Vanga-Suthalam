@@ -1,0 +1,963 @@
+/* =========================================================
+   VANGA SUTHALAM - ISLAND APPROVAL PAGE
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.approval-page {
+  min-height: 100vh;
+  background: #f4f9fc;
+  color: #123f55;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.approval-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 76px;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  backdrop-filter: blur(15px);
+
+  border-bottom: 1px solid #e2edf2;
+
+  box-shadow: 0 4px 20px rgba(0, 70, 100, 0.08);
+}
+
+.approval-logo {
+  color: #086b91;
+
+  font-size: 20px;
+  font-weight: 800;
+
+  letter-spacing: 0.6px;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+.approval-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.approval-nav-links button,
+.approval-nav-actions button {
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.25s ease;
+}
+
+.approval-nav-links button {
+  padding: 10px 14px;
+
+  color: #4c6877;
+
+  border-radius: 8px;
+}
+
+.approval-nav-links button:hover {
+  color: #087ea4;
+
+  background: #edf9fc;
+}
+
+.approval-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.approval-login-btn {
+  padding: 10px 16px;
+
+  color: #08749a !important;
+}
+
+.approval-login-btn:hover {
+  background: #edf8fb !important;
+
+  border-radius: 8px;
+}
+
+.approval-register-btn {
+  padding: 11px 19px !important;
+
+  color: white !important;
+
+  background: #087ea4 !important;
+
+  border-radius: 9px;
+}
+
+.approval-register-btn:hover {
+  background: #056b8c !important;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.approval-hero {
+  position: relative;
+
+  min-height: 390px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 120px 6% 60px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 40, 62, 0.9),
+      rgba(5, 100, 132, 0.7),
+      rgba(0, 135, 170, 0.4)
+    ),
+    url("/image.png") center/cover no-repeat;
+
+  overflow: hidden;
+}
+
+.approval-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 75% 45%,
+      rgba(90, 220, 255, 0.2),
+      transparent 35%
+    );
+}
+
+.approval-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1150px;
+
+  margin: auto;
+
+  color: white;
+}
+
+.approval-hero-content > span {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #a3edff;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+}
+
+.approval-hero-content h1 {
+  margin: 0 0 15px;
+
+  font-size: clamp(42px, 6vw, 65px);
+
+  line-height: 1.05;
+
+  letter-spacing: -1px;
+}
+
+.approval-hero-content p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   FLOW
+   ========================================================= */
+
+.approval-flow-section {
+  padding: 28px 6%;
+
+  background: white;
+
+  border-bottom: 1px solid #e4eef2;
+}
+
+.approval-flow {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flow-item {
+  min-width: 145px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  color: #9aabb3;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+.flow-item span {
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #8497a0;
+
+  background: #edf3f5;
+
+  font-size: 12px;
+}
+
+.flow-item.active {
+  color: #087ea4;
+}
+
+.flow-item.active span {
+  color: white;
+
+  background: #087ea4;
+
+  box-shadow:
+    0 5px 14px rgba(8, 126, 164, 0.2);
+}
+
+.flow-line {
+  width: 70px;
+  height: 2px;
+
+  background: #dce9ee;
+}
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.approval-main {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: auto;
+
+  padding: 65px 25px 85px;
+}
+
+/* =========================================================
+   SELECTED ISLAND
+   ========================================================= */
+
+.selected-island-card {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 22px 25px;
+
+  margin-bottom: 25px;
+
+  border: 1px solid #cce5ed;
+
+  border-radius: 15px;
+
+  background: white;
+
+  box-shadow:
+    0 8px 28px rgba(12, 82, 107, 0.08);
+}
+
+.selected-island-icon {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #e9f8fc;
+
+  font-size: 28px;
+}
+
+.selected-island-card > div:nth-child(2) {
+  flex: 1;
+}
+
+.selected-island-card > div:nth-child(2) > span {
+  color: #087ea4;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.selected-island-card h2 {
+  margin: 4px 0 3px;
+
+  color: #123f55;
+
+  font-size: 23px;
+}
+
+.selected-island-card p {
+  margin: 0;
+
+  color: #6e8792;
+
+  font-size: 13px;
+}
+
+.approval-required-badge {
+  padding: 9px 13px;
+
+  border: 1px solid #efd98e;
+
+  border-radius: 20px;
+
+  color: #765600;
+
+  background: #fff9e5;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   FORM CARD
+   ========================================================= */
+
+.approval-form-card {
+  padding: 35px;
+
+  border: 1px solid #e0edf2;
+
+  border-radius: 18px;
+
+  background: white;
+
+  box-shadow:
+    0 12px 35px rgba(14, 76, 101, 0.08);
+}
+
+.form-heading {
+  margin-bottom: 30px;
+}
+
+.form-heading > span {
+  color: #087ea4;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.form-heading h2 {
+  margin: 7px 0 8px;
+
+  color: #123f55;
+
+  font-size: 30px;
+}
+
+.form-heading p {
+  margin: 0;
+
+  color: #728894;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.approval-message {
+  margin-bottom: 22px;
+
+  padding: 13px 16px;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.approval-message.error {
+  border: 1px solid #f2c5c0;
+
+  color: #a3261d;
+
+  background: #fff2f1;
+}
+
+.approval-message.success {
+  border: 1px solid #b8e5c8;
+
+  color: #176b38;
+
+  background: #eefbf2;
+}
+
+/* =========================================================
+   FORM GRID
+   ========================================================= */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.form-group {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+
+  color: #31576a;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  border: 1px solid #d7e6ec;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  color: #183f50;
+
+  background: #fbfdfe;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  transition: 0.25s ease;
+}
+
+.form-group input {
+  height: 48px;
+
+  padding: 0 14px;
+}
+
+.form-group textarea {
+  min-height: 110px;
+
+  padding: 13px 14px;
+
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a1b1b8;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #55b8d5;
+
+  background: white;
+
+  box-shadow:
+    0 0 0 3px rgba(8, 126, 164, 0.08);
+}
+
+/* =========================================================
+   APPROVAL NOTE
+   ========================================================= */
+
+.approval-note {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-top: 25px;
+
+  padding: 15px 17px;
+
+  border: 1px solid #cfe7ef;
+
+  border-radius: 10px;
+
+  background: #f0f9fc;
+}
+
+.approval-note > span {
+  font-size: 18px;
+}
+
+.approval-note p {
+  margin: 0;
+
+  color: #587582;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+.approval-note strong {
+  color: #08749a;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.form-buttons {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 28px;
+}
+
+.cancel-approval-btn,
+.submit-approval-btn {
+  min-height: 48px;
+
+  padding: 0 23px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.cancel-approval-btn {
+  border: 1px solid #d2e2e8;
+
+  color: #53707d;
+
+  background: white;
+}
+
+.cancel-approval-btn:hover {
+  border-color: #a8cbd6;
+
+  background: #f5fafc;
+}
+
+.submit-approval-btn {
+  border: none;
+
+  color: white;
+
+  background: #087ea4;
+}
+
+.submit-approval-btn:hover {
+  background: #056b8c;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 18px rgba(8, 126, 164, 0.2);
+}
+
+.submit-approval-btn:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+/* =========================================================
+   ERROR CARD
+   ========================================================= */
+
+.approval-error-card {
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  text-align: center;
+}
+
+.approval-error-icon {
+  font-size: 48px;
+}
+
+.approval-error-card h2 {
+  margin: 15px 0 8px;
+
+  color: #16465c;
+}
+
+.approval-error-card p {
+  max-width: 500px;
+
+  color: #708691;
+
+  line-height: 1.7;
+}
+
+.approval-back-btn {
+  margin-top: 15px;
+
+  padding: 13px 21px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  color: white;
+
+  background: #087ea4;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.approval-footer {
+  padding: 42px 20px 22px;
+
+  color: white;
+
+  background: #062f45;
+
+  text-align: center;
+}
+
+.approval-footer-logo {
+  margin-bottom: 9px;
+
+  color: #8ee8ff;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.approval-footer p {
+  max-width: 500px;
+
+  margin: 0 auto 22px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+.footer-copy {
+  padding-top: 18px;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.1);
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+  .approval-navbar {
+    padding: 0 4%;
+  }
+
+  .approval-nav-links {
+    gap: 2px;
+  }
+
+  .approval-nav-links button {
+    padding: 9px 8px;
+  }
+
+  .flow-item {
+    min-width: auto;
+  }
+
+  .flow-item strong {
+    font-size: 11px;
+  }
+
+  .flow-line {
+    width: 35px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .approval-navbar {
+    height: 70px;
+
+    padding: 0 18px;
+  }
+
+  .approval-logo {
+    font-size: 16px;
+  }
+
+  .approval-nav-links {
+    display: none;
+  }
+
+  .approval-nav-actions {
+    margin-left: auto;
+  }
+
+  .approval-login-btn {
+    padding: 8px 9px !important;
+  }
+
+  .approval-register-btn {
+    padding: 9px 12px !important;
+  }
+
+  /* HERO */
+
+  .approval-hero {
+    min-height: 390px;
+
+    padding:
+      105px 22px 55px;
+  }
+
+  .approval-hero-content h1 {
+    font-size: 43px;
+  }
+
+  .approval-hero-content p {
+    font-size: 15px;
+  }
+
+  /* FLOW */
+
+  .approval-flow-section {
+    padding: 22px 15px;
+  }
+
+  .approval-flow {
+    overflow-x: auto;
+
+    justify-content: flex-start;
+
+    padding-bottom: 4px;
+  }
+
+  .flow-item {
+    flex-shrink: 0;
+
+    flex-direction: column;
+
+    min-width: 90px;
+
+    gap: 5px;
+  }
+
+  .flow-item strong {
+    font-size: 9px;
+  }
+
+  .flow-line {
+    flex-shrink: 0;
+
+    width: 25px;
+
+    margin-bottom: 22px;
+  }
+
+  /* MAIN */
+
+  .approval-main {
+    padding:
+      45px 16px 65px;
+  }
+
+  /* ISLAND */
+
+  .selected-island-card {
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+
+    padding: 19px;
+  }
+
+  .approval-required-badge {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  /* FORM */
+
+  .approval-form-card {
+    padding: 23px 18px;
+  }
+
+  .form-heading h2 {
+    font-size: 26px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .form-group.full-width {
+    grid-column: auto;
+  }
+
+  .form-buttons {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-approval-btn,
+  .submit-approval-btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+  .approval-logo {
+    font-size: 14px;
+  }
+
+  .approval-register-btn {
+    padding: 8px 10px !important;
+
+    font-size: 12px !important;
+  }
+
+  .approval-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .selected-island-card h2 {
+    font-size: 20px;
+  }
+
+  .approval-form-card {
+    border-radius: 13px;
+  }
+}

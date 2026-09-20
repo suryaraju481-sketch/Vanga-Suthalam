@@ -1,0 +1,25 @@
+# React
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Node logs
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Java / Eclipse
+backend/VangaSuthalam1/target/
+backend/VangaSuthalam1/.settings/
+backend/VangaSuthalam1/.classpath
+backend/VangaSuthalam1/.project
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

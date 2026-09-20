@@ -1,0 +1,1819 @@
+/* =========================================================
+   VANGA SUTHALAM
+   FEEDBACK PAGE
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.vs-feedback-page {
+  min-height: 100vh;
+  background: #f3f9fc;
+  color: #12384f;
+  font-family:
+    Inter,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.vs-feedback-navbar {
+  height: 74px;
+  padding: 0 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border-bottom: 1px solid #d9eaf2;
+
+  box-shadow:
+    0 5px 25px rgba(0, 65, 100, 0.08);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.vs-feedback-logo {
+  text-decoration: none;
+
+  color: #0077b6;
+
+  font-size: 22px;
+  font-weight: 850;
+
+  letter-spacing: -0.5px;
+}
+
+.vs-home-link {
+  text-decoration: none;
+
+  padding: 10px 17px;
+
+  color: #48697a;
+
+  border-radius: 10px;
+
+  font-size: 13px;
+  font-weight: 750;
+
+  transition: 0.25s ease;
+}
+
+.vs-home-link:hover {
+  background: #e9f7ff;
+  color: #0077b6;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.vs-feedback-hero {
+  min-height: 450px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(0, 40, 63, 0.9),
+      rgba(0, 116, 170, 0.7)
+    ),
+    url("/image.png");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+}
+
+.vs-feedback-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 31, 49, 0.1),
+      rgba(0, 56, 83, 0.55)
+    );
+}
+
+.vs-feedback-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(900px, 92%);
+
+  padding: 75px 20px;
+
+  text-align: center;
+
+  color: white;
+}
+
+.vs-hero-badge {
+  display: inline-block;
+
+  padding: 8px 17px;
+
+  margin-bottom: 18px;
+
+  border-radius: 30px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.28);
+
+  background:
+    rgba(255, 255, 255, 0.12);
+
+  font-size: 10px;
+
+  font-weight: 850;
+
+  letter-spacing: 1.6px;
+}
+
+.vs-feedback-hero-content h1 {
+  margin: 0;
+
+  font-size: clamp(42px, 6vw, 68px);
+
+  line-height: 1.02;
+
+  letter-spacing: -2px;
+
+  font-weight: 900;
+}
+
+.vs-feedback-hero-content h1 span {
+  color: #a9e6ff;
+}
+
+.vs-feedback-hero-content > p {
+  max-width: 650px;
+
+  margin: 22px auto 0;
+
+  color:
+    rgba(255, 255, 255, 0.88);
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+.vs-hero-items {
+  margin-top: 32px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+.vs-hero-items div {
+  min-width: 160px;
+
+  padding: 12px 17px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  border-radius: 12px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.18);
+
+  background:
+    rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(8px);
+}
+
+.vs-hero-items span {
+  font-size: 18px;
+}
+
+.vs-hero-items strong {
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.vs-feedback-container {
+  width: min(1100px, 91%);
+
+  margin: 0 auto;
+
+  padding: 55px 0 80px;
+}
+
+
+/* =========================================================
+   BOOKING CARD
+   ========================================================= */
+
+.vs-booking-card {
+  padding: 23px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 24px;
+
+  background: white;
+
+  border: 1px solid #d9eaf2;
+
+  border-radius: 19px;
+
+  box-shadow:
+    0 15px 40px
+    rgba(0, 72, 110, 0.07);
+}
+
+.vs-booking-icon {
+  width: 60px;
+  height: 60px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: #e5f6ff;
+
+  font-size: 27px;
+}
+
+.vs-booking-content {
+  flex: 1;
+}
+
+.vs-booking-content > span {
+  display: block;
+
+  color: #1590c5;
+
+  font-size: 9px;
+
+  font-weight: 850;
+
+  letter-spacing: 1.2px;
+}
+
+.vs-booking-content h2 {
+  margin: 4px 0 9px;
+
+  color: #153d54;
+
+  font-size: 21px;
+
+  font-weight: 850;
+}
+
+.vs-booking-details {
+  display: flex;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+}
+
+.vs-booking-details span {
+  padding: 6px 10px;
+
+  border-radius: 8px;
+
+  background: #f1f8fc;
+
+  color: #698391;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+.vs-booking-number {
+  min-width: 115px;
+
+  padding-left: 20px;
+
+  text-align: right;
+
+  border-left: 1px solid #e1edf2;
+}
+
+.vs-booking-number span {
+  display: block;
+
+  color: #8097a4;
+
+  font-size: 9px;
+
+  font-weight: 850;
+
+  letter-spacing: 1px;
+}
+
+.vs-booking-number strong {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #0077b6;
+
+  font-size: 19px;
+
+  font-weight: 850;
+}
+
+
+/* =========================================================
+   WARNING
+   ========================================================= */
+
+.vs-warning {
+  margin-bottom: 24px;
+
+  padding: 17px 20px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 13px;
+
+  border: 1px solid #efd99e;
+
+  border-radius: 14px;
+
+  background: #fff9e9;
+}
+
+.vs-warning > div {
+  font-size: 21px;
+}
+
+.vs-warning strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #8a6400;
+
+  font-size: 14px;
+}
+
+.vs-warning p {
+  margin: 0;
+
+  color: #8c7747;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.vs-feedback-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.vs-section {
+  padding: 30px;
+
+  background: white;
+
+  border: 1px solid #dcecf3;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 14px 38px
+    rgba(0, 72, 110, 0.055);
+}
+
+.vs-section-heading {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  margin-bottom: 27px;
+}
+
+.vs-section-number {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #e5f6ff;
+
+  color: #0077b6;
+
+  font-size: 13px;
+
+  font-weight: 850;
+}
+
+.vs-section-heading span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #1590c5;
+
+  font-size: 9px;
+
+  font-weight: 850;
+
+  letter-spacing: 1.3px;
+}
+
+.vs-section-heading h2 {
+  margin: 0 0 5px;
+
+  color: #153d54;
+
+  font-size: 22px;
+
+  font-weight: 850;
+}
+
+.vs-section-heading p {
+  margin: 0;
+
+  color: #758d9b;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   RATING GRID
+   ========================================================= */
+
+.vs-rating-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.vs-rating-card {
+  padding: 19px;
+
+  border: 1px solid #e0edf3;
+
+  border-radius: 15px;
+
+  background: #f9fcfe;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.vs-rating-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #b9ddeb;
+
+  box-shadow:
+    0 10px 25px
+    rgba(0, 75, 110, 0.07);
+}
+
+.vs-rating-error {
+  border-color: #e39a9a;
+}
+
+.vs-rating-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 17px;
+}
+
+.vs-rating-icon {
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #e6f6ff;
+
+  font-size: 21px;
+}
+
+.vs-rating-header h3 {
+  margin: 0 0 3px;
+
+  color: #173d54;
+
+  font-size: 15px;
+
+  font-weight: 800;
+}
+
+.vs-rating-header p {
+  margin: 0;
+
+  color: #7b919e;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   STARS
+   ========================================================= */
+
+.vs-stars-wrapper {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  flex-wrap: wrap;
+}
+
+.vs-stars {
+  display: flex;
+
+  gap: 3px;
+}
+
+.vs-star {
+  width: 34px;
+  height: 34px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #cbd9df;
+
+  font-size: 25px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.18s ease,
+    color 0.18s ease;
+}
+
+.vs-star:hover {
+  color: #f5b72d;
+
+  transform: scale(1.15);
+}
+
+.vs-star.active {
+  color: #f5b72d;
+
+  text-shadow:
+    0 3px 8px
+    rgba(245, 183, 45, 0.2);
+}
+
+.vs-rating-name {
+  color: #0077b6;
+
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+.vs-field-error {
+  display: block;
+
+  margin-top: 9px;
+
+  color: #c44040;
+
+  font-size: 10px;
+
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   OVERALL
+   ========================================================= */
+
+.vs-overall-card {
+  padding: 27px 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #006b96,
+      #008ac8
+    );
+
+  border-radius: 20px;
+
+  color: white;
+
+  box-shadow:
+    0 17px 40px
+    rgba(0, 104, 148, 0.17);
+}
+
+.vs-overall-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+.vs-overall-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background:
+    rgba(255, 255, 255, 0.14);
+
+  font-size: 24px;
+}
+
+.vs-overall-left span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color:
+    rgba(255, 255, 255, 0.66);
+
+  font-size: 9px;
+
+  font-weight: 850;
+
+  letter-spacing: 1.2px;
+}
+
+.vs-overall-left h2 {
+  margin: 0 0 4px;
+
+  font-size: 20px;
+
+  font-weight: 850;
+}
+
+.vs-overall-left p {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.76);
+
+  font-size: 11px;
+}
+
+.vs-overall-right {
+  min-width: 260px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+}
+
+.vs-overall-right .vs-star {
+  color:
+    rgba(255, 255, 255, 0.4);
+}
+
+.vs-overall-right .vs-star:hover,
+.vs-overall-right .vs-star.active {
+  color: #ffd166;
+}
+
+.vs-overall-right .vs-rating-name {
+  color: white;
+}
+
+
+/* =========================================================
+   COMMENTS
+   ========================================================= */
+
+.vs-comments-box {
+  overflow: hidden;
+
+  border: 1px solid #dcebf2;
+
+  border-radius: 15px;
+
+  background: #f9fcfe;
+}
+
+.vs-comments-error {
+  border-color: #e39a9a;
+}
+
+.vs-comments-title {
+  padding: 13px 17px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  border-bottom: 1px solid #e2edf2;
+
+  background: white;
+
+  color: #254b60;
+
+  font-size: 12px;
+}
+
+.vs-comments-title span {
+  font-size: 17px;
+}
+
+.vs-comments-box textarea {
+  width: 100%;
+
+  min-height: 165px;
+
+  display: block;
+
+  padding: 17px;
+
+  resize: vertical;
+
+  outline: none;
+
+  border: none;
+
+  background: #f9fcfe;
+
+  color: #173c52;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+.vs-comments-box textarea::placeholder {
+  color: #9aacb7;
+}
+
+.vs-comments-footer {
+  padding: 10px 17px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  border-top: 1px solid #e2edf2;
+
+  background: white;
+
+  color: #899ca7;
+
+  font-size: 9px;
+}
+
+.vs-comments-footer strong {
+  color: #0077b6;
+}
+
+
+/* =========================================================
+   CUSTOMER
+   ========================================================= */
+
+.vs-customer-card {
+  padding: 19px 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  background: white;
+
+  border: 1px solid #dcecf3;
+
+  border-radius: 17px;
+
+  box-shadow:
+    0 10px 30px
+    rgba(0, 72, 110, 0.045);
+}
+
+.vs-customer-icon {
+  width: 47px;
+  height: 47px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #e7f6ff;
+
+  font-size: 21px;
+}
+
+.vs-customer-info {
+  flex: 1;
+}
+
+.vs-customer-info span {
+  display: block;
+
+  color: #8197a4;
+
+  font-size: 8px;
+
+  font-weight: 850;
+
+  letter-spacing: 1px;
+}
+
+.vs-customer-info h3 {
+  margin: 3px 0 2px;
+
+  color: #173d54;
+
+  font-size: 15px;
+
+  font-weight: 800;
+}
+
+.vs-customer-info p {
+  margin: 0;
+
+  color: #78909d;
+
+  font-size: 10px;
+}
+
+.vs-verified {
+  padding: 7px 11px;
+
+  border-radius: 20px;
+
+  background: #e7f8ef;
+
+  color: #138454;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   SUBMIT ERROR
+   ========================================================= */
+
+.vs-submit-error {
+  padding: 17px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  border: 1px solid #efc1c1;
+
+  border-radius: 14px;
+
+  background: #fff2f2;
+}
+
+.vs-submit-error > span {
+  font-size: 20px;
+}
+
+.vs-submit-error strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #a33737;
+
+  font-size: 13px;
+}
+
+.vs-submit-error p {
+  margin: 0;
+
+  color: #985e5e;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SUBMIT
+   ========================================================= */
+
+.vs-submit-card {
+  padding: 23px 26px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  background: white;
+
+  border: 1px solid #d8eaf2;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 35px
+    rgba(0, 72, 110, 0.06);
+}
+
+.vs-submit-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.vs-lock {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #e8f7ff;
+
+  font-size: 19px;
+}
+
+.vs-submit-info strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #173d54;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+.vs-submit-info p {
+  margin: 0;
+
+  color: #7d919d;
+
+  font-size: 10px;
+}
+
+.vs-submit-button {
+  min-width: 205px;
+
+  padding: 14px 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0077b6,
+      #008bcf
+    );
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px
+    rgba(0, 119, 182, 0.2);
+
+  transition: 0.25s ease;
+}
+
+.vs-submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 27px
+    rgba(0, 119, 182, 0.28);
+}
+
+.vs-submit-button:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+}
+
+.vs-submit-button > span:last-child {
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   SPINNER
+   ========================================================= */
+
+.vs-spinner {
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid
+    rgba(255, 255, 255, 0.35);
+
+  border-top-color: white;
+
+  border-radius: 50%;
+
+  animation:
+    vsSpin 0.7s linear infinite;
+}
+
+@keyframes vsSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   SUCCESS HERO
+   ========================================================= */
+
+.vs-success-hero {
+  min-height: 420px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(0, 42, 65, 0.91),
+      rgba(0, 119, 182, 0.72)
+    ),
+    url("/image.png");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+}
+
+.vs-success-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 35, 55, 0.12),
+      rgba(0, 58, 86, 0.5)
+    );
+}
+
+.vs-success-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(800px, 91%);
+
+  padding: 60px 20px;
+
+  text-align: center;
+
+  color: white;
+}
+
+.vs-success-check {
+  width: 82px;
+  height: 82px;
+
+  margin: 0 auto 19px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 2px solid
+    rgba(255, 255, 255, 0.72);
+
+  background:
+    rgba(255, 255, 255, 0.14);
+
+  font-size: 40px;
+
+  animation:
+    vsSuccess 0.7s ease;
+}
+
+@keyframes vsSuccess {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  70% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.vs-success-badge {
+  display: inline-block;
+
+  padding: 8px 16px;
+
+  margin-bottom: 13px;
+
+  border-radius: 30px;
+
+  background:
+    rgba(255, 255, 255, 0.12);
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.28);
+
+  font-size: 9px;
+
+  font-weight: 850;
+
+  letter-spacing: 1.5px;
+}
+
+.vs-success-content h1 {
+  margin: 0;
+
+  font-size: clamp(40px, 6vw, 63px);
+
+  line-height: 1.05;
+
+  font-weight: 900;
+
+  letter-spacing: -1.5px;
+}
+
+.vs-success-content p {
+  max-width: 620px;
+
+  margin: 18px auto 0;
+
+  color:
+    rgba(255, 255, 255, 0.88);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   SUCCESS CARD
+   ========================================================= */
+
+.vs-success-container {
+  width: min(850px, 91%);
+
+  margin: 0 auto;
+
+  padding: 55px 0 75px;
+}
+
+.vs-success-card {
+  padding: 30px;
+
+  background: white;
+
+  border: 1px solid #dcecf3;
+
+  border-radius: 21px;
+
+  box-shadow:
+    0 18px 50px
+    rgba(0, 72, 110, 0.08);
+}
+
+.vs-success-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid #e5eef3;
+}
+
+.vs-success-icon {
+  width: 55px;
+  height: 55px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #e7f7ff;
+
+  font-size: 25px;
+}
+
+.vs-success-heading span {
+  display: block;
+
+  color: #1590c5;
+
+  font-size: 9px;
+
+  font-weight: 850;
+
+  letter-spacing: 1.1px;
+}
+
+.vs-success-heading h2 {
+  margin: 4px 0 4px;
+
+  color: #173d54;
+
+  font-size: 20px;
+
+  font-weight: 850;
+}
+
+.vs-success-heading p {
+  margin: 0;
+
+  color: #758d9a;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+.vs-feedback-id {
+  margin-top: 20px;
+
+  padding: 14px 17px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background: #eef9ff;
+
+  border: 1px solid #cce8f5;
+
+  border-radius: 12px;
+}
+
+.vs-feedback-id span {
+  color: #77909f;
+
+  font-size: 9px;
+
+  font-weight: 850;
+
+  letter-spacing: 1px;
+}
+
+.vs-feedback-id strong {
+  color: #0077b6;
+
+  font-size: 17px;
+}
+
+.vs-trip-summary {
+  margin-top: 19px;
+
+  padding: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  background: #f8fcfe;
+
+  border: 1px solid #e0edf3;
+
+  border-radius: 14px;
+}
+
+.vs-trip-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #e6f6ff;
+
+  font-size: 21px;
+}
+
+.vs-trip-summary span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #7d95a2;
+
+  font-size: 8px;
+
+  font-weight: 850;
+
+  letter-spacing: 1px;
+}
+
+.vs-trip-summary h3 {
+  margin: 0 0 3px;
+
+  color: #173d54;
+
+  font-size: 15px;
+
+  font-weight: 800;
+}
+
+.vs-trip-summary p {
+  margin: 0;
+
+  color: #78909d;
+
+  font-size: 10px;
+}
+
+.vs-success-actions {
+  margin-top: 24px;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 11px;
+}
+
+.vs-primary-button,
+.vs-secondary-button {
+  min-width: 190px;
+
+  padding: 13px 18px;
+
+  border-radius: 10px;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.vs-primary-button {
+  border: none;
+
+  background: #0077b6;
+
+  color: white;
+
+  box-shadow:
+    0 7px 18px
+    rgba(0, 119, 182, 0.18);
+}
+
+.vs-primary-button:hover {
+  background: #005f91;
+
+  transform: translateY(-2px);
+}
+
+.vs-secondary-button {
+  border: 1px solid #d1e3eb;
+
+  background: white;
+
+  color: #426477;
+}
+
+.vs-secondary-button:hover {
+  background: #eff9ff;
+
+  color: #0077b6;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.vs-feedback-footer {
+  padding: 32px 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 6px;
+
+  text-align: center;
+
+  background: #063b5a;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.vs-feedback-footer strong {
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 850;
+}
+
+.vs-feedback-footer span {
+  font-size: 10px;
+}
+
+.vs-feedback-footer small {
+  margin-top: 5px;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .vs-rating-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vs-overall-card {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .vs-overall-right {
+    min-width: 0;
+
+    width: 100%;
+
+    align-items: flex-start;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .vs-feedback-navbar {
+    height: 66px;
+
+    padding: 0 17px;
+  }
+
+  .vs-feedback-logo {
+    font-size: 17px;
+  }
+
+  .vs-home-link {
+    padding: 8px 10px;
+
+    font-size: 11px;
+  }
+
+  .vs-feedback-hero {
+    min-height: 430px;
+  }
+
+  .vs-feedback-hero-content {
+    padding: 55px 10px;
+  }
+
+  .vs-feedback-hero-content h1 {
+    font-size: 39px;
+  }
+
+  .vs-feedback-hero-content > p {
+    font-size: 13px;
+  }
+
+  .vs-hero-items {
+    gap: 7px;
+  }
+
+  .vs-hero-items div {
+    min-width: 135px;
+
+    padding: 10px;
+  }
+
+  .vs-feedback-container {
+    width: 94%;
+
+    padding: 30px 0 55px;
+  }
+
+  .vs-booking-card {
+    padding: 19px;
+
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+  }
+
+  .vs-booking-content h2 {
+    font-size: 18px;
+  }
+
+  .vs-booking-number {
+    width: 100%;
+
+    padding: 13px 0 0;
+
+    text-align: left;
+
+    border-left: none;
+
+    border-top: 1px solid #e1edf2;
+  }
+
+  .vs-section {
+    padding: 21px;
+
+    border-radius: 17px;
+  }
+
+  .vs-section-heading h2 {
+    font-size: 19px;
+  }
+
+  .vs-section-heading p {
+    font-size: 11px;
+  }
+
+  .vs-rating-card {
+    padding: 17px;
+  }
+
+  .vs-star {
+    width: 31px;
+    height: 31px;
+
+    font-size: 23px;
+  }
+
+  .vs-overall-card {
+    padding: 22px;
+
+    border-radius: 17px;
+  }
+
+  .vs-overall-left h2 {
+    font-size: 18px;
+  }
+
+  .vs-submit-card {
+    padding: 21px;
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .vs-submit-button {
+    width: 100%;
+  }
+
+  .vs-success-hero {
+    min-height: 410px;
+  }
+
+  .vs-success-content {
+    padding: 50px 15px;
+  }
+
+  .vs-success-content h1 {
+    font-size: 38px;
+  }
+
+  .vs-success-card {
+    padding: 21px;
+
+    border-radius: 17px;
+  }
+
+  .vs-success-actions {
+    flex-direction: column;
+  }
+
+  .vs-primary-button,
+  .vs-secondary-button {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .vs-feedback-logo {
+    font-size: 15px;
+  }
+
+  .vs-feedback-hero-content h1 {
+    font-size: 33px;
+  }
+
+  .vs-section {
+    padding: 18px;
+  }
+
+  .vs-star {
+    width: 28px;
+    height: 28px;
+
+    font-size: 21px;
+  }
+
+}

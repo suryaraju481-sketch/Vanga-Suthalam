@@ -1,0 +1,1128 @@
+/* =========================================================
+   VANGA SUTHALAM - CAPTAIN DASHBOARD
+   Professional Ocean / Blue Glass UI
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.captain-dashboard {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+
+  background-image: url("/image.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  font-family:
+    Inter,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   BACKGROUND OVERLAY
+   ========================================================= */
+
+.dashboard-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(1, 24, 43, 0.96),
+      rgba(3, 66, 91, 0.84),
+      rgba(0, 25, 48, 0.94)
+    );
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.dashboard-container {
+  position: relative;
+  z-index: 1;
+
+  width: min(1450px, 94%);
+  margin: 0 auto;
+
+  padding: 55px 0 80px;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+
+  margin-bottom: 35px;
+}
+
+.dashboard-label {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #42d9ff;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1.05;
+
+  font-weight: 900;
+  letter-spacing: -2px;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.dashboard-header p {
+  margin: 16px 0 0;
+
+  max-width: 650px;
+
+  color: rgba(225, 246, 255, 0.78);
+
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   CAPTAIN ID BOX
+   ========================================================= */
+
+.captain-id-box {
+  min-width: 150px;
+
+  padding: 22px 28px;
+
+  border: 1px solid rgba(83, 222, 255, 0.35);
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(8, 73, 100, 0.75),
+      rgba(3, 39, 62, 0.72)
+    );
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  text-align: center;
+}
+
+.captain-id-box span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #6ee7ff;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.captain-id-box strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 30px;
+  font-weight: 900;
+}
+
+/* =========================================================
+   DASHBOARD CONTROL
+   ========================================================= */
+
+.dashboard-control {
+  margin-bottom: 35px;
+
+  border: 1px solid rgba(90, 222, 255, 0.25);
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(5, 52, 76, 0.78),
+      rgba(3, 31, 52, 0.82)
+    );
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.control-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 28px 32px;
+}
+
+.control-content h2 {
+  margin: 0 0 6px;
+
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.control-content p {
+  margin: 0;
+
+  color: rgba(221, 243, 252, 0.68);
+
+  font-size: 15px;
+}
+
+/* =========================================================
+   SEARCH AREA
+   ========================================================= */
+
+.captain-search {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.captain-search input {
+  width: 180px;
+
+  padding: 15px 18px;
+
+  border: 1px solid rgba(89, 216, 255, 0.28);
+  border-radius: 12px;
+
+  outline: none;
+
+  background: rgba(1, 29, 47, 0.75);
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.captain-search input::placeholder {
+  color: rgba(210, 238, 247, 0.42);
+}
+
+.captain-search input:focus {
+  border-color: #4ddcff;
+
+  box-shadow:
+    0 0 0 3px rgba(77, 220, 255, 0.12);
+}
+
+.captain-search button {
+  padding: 15px 24px;
+
+  border: none;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #16c7f3,
+      #0879b7
+    );
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(0, 176, 235, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.captain-search button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 30px rgba(0, 191, 255, 0.3);
+}
+
+.captain-search button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+/* =========================================================
+   ERROR MESSAGE
+   ========================================================= */
+
+.dashboard-message {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 16px;
+
+  margin-bottom: 30px;
+
+  padding: 20px 24px;
+
+  border-radius: 18px;
+}
+
+.error-message {
+  border: 1px solid rgba(255, 103, 103, 0.35);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(103, 26, 32, 0.7),
+      rgba(65, 20, 28, 0.7)
+    );
+}
+
+.dashboard-message > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: rgba(255, 99, 99, 0.16);
+
+  font-size: 20px;
+}
+
+.dashboard-message strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 17px;
+}
+
+.dashboard-message p {
+  margin: 0;
+
+  color: rgba(255, 224, 224, 0.78);
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.loading-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 250px;
+
+  border: 1px solid rgba(93, 220, 255, 0.2);
+  border-radius: 25px;
+
+  background: rgba(2, 39, 61, 0.75);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.loading-spinner {
+  width: 46px;
+  height: 46px;
+
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  border-top-color: #42dcff;
+
+  border-radius: 50%;
+
+  animation: dashboardSpin 0.8s linear infinite;
+}
+
+.loading-card p {
+  margin-top: 18px;
+
+  color: rgba(221, 243, 252, 0.7);
+
+  font-size: 16px;
+}
+
+@keyframes dashboardSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.empty-card {
+  padding: 65px 30px;
+
+  border: 1px solid rgba(93, 220, 255, 0.2);
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(3, 54, 77, 0.75),
+      rgba(2, 30, 50, 0.78)
+    );
+
+  text-align: center;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.empty-icon {
+  font-size: 55px;
+
+  margin-bottom: 15px;
+}
+
+.empty-card h2 {
+  margin: 0 0 10px;
+
+  font-size: 30px;
+}
+
+.empty-card p {
+  margin: 0;
+
+  color: rgba(220, 242, 251, 0.65);
+
+  font-size: 16px;
+}
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.trips-section {
+  margin-top: 30px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.section-heading > div:first-child > span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #4fdfff;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.trip-count {
+  padding: 10px 18px;
+
+  border: 1px solid rgba(80, 218, 255, 0.25);
+  border-radius: 30px;
+
+  background: rgba(3, 54, 76, 0.7);
+
+  color: #9beaff;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   TRIP GRID
+   ========================================================= */
+
+.trip-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(440px, 1fr));
+
+  gap: 25px;
+}
+
+/* =========================================================
+   TRIP CARD
+   ========================================================= */
+
+.trip-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(92, 220, 255, 0.2);
+  border-radius: 27px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(4, 52, 74, 0.88),
+      rgba(2, 28, 47, 0.9)
+    );
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.trip-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(75, 220, 255, 0.42);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.38),
+    0 0 35px rgba(0, 185, 235, 0.08);
+}
+
+/* =========================================================
+   TRIP TOP
+   ========================================================= */
+
+.trip-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 20px;
+
+  padding: 28px 28px 22px;
+
+  border-bottom: 1px solid rgba(129, 220, 245, 0.1);
+}
+
+.trip-number {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #49dfff;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+.trip-top h3 {
+  margin: 0;
+
+  font-size: 26px;
+  line-height: 1.2;
+
+  font-weight: 850;
+}
+
+.location {
+  margin: 8px 0 0;
+
+  color: rgba(210, 238, 247, 0.6);
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   STATUS BADGE
+   ========================================================= */
+
+.status-badge {
+  flex-shrink: 0;
+
+  padding: 8px 13px;
+
+  border-radius: 30px;
+
+  background: rgba(50, 184, 225, 0.14);
+
+  border: 1px solid rgba(75, 215, 255, 0.25);
+
+  color: #74e4ff;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.status-badge.booked {
+  background: rgba(63, 190, 235, 0.14);
+  color: #71e2ff;
+}
+
+/* =========================================================
+   INFORMATION BLOCK
+   ========================================================= */
+
+.information-block {
+  margin: 18px 22px 0;
+
+  padding: 19px;
+
+  border: 1px solid rgba(91, 218, 249, 0.1);
+  border-radius: 18px;
+
+  background: rgba(0, 31, 49, 0.48);
+}
+
+.block-title {
+  margin-bottom: 15px;
+
+  color: #9aeaff;
+
+  font-size: 12px;
+  font-weight: 850;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   INFO GRID
+   ========================================================= */
+
+.info-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 15px;
+}
+
+.info-item {
+  min-width: 0;
+}
+
+.info-item span,
+.schedule-grid span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: rgba(190, 225, 236, 0.5);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.info-item strong,
+.schedule-grid strong {
+  display: block;
+
+  overflow: hidden;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 750;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.small-text {
+  font-size: 12px !important;
+}
+
+/* =========================================================
+   BOAT DISPLAY
+   ========================================================= */
+
+.boat-display {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.boat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 55px;
+  height: 55px;
+
+  flex-shrink: 0;
+
+  border: 1px solid rgba(81, 218, 255, 0.2);
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(18, 159, 208, 0.2),
+      rgba(3, 68, 98, 0.35)
+    );
+
+  font-size: 27px;
+}
+
+.boat-display strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #ffffff;
+
+  font-size: 17px;
+}
+
+.boat-display span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: rgba(211, 237, 246, 0.58);
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   SCHEDULE
+   ========================================================= */
+
+.schedule-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 17px;
+}
+
+/* =========================================================
+   REQUIREMENTS
+   ========================================================= */
+
+.requirements {
+  margin: 18px 22px 0;
+
+  padding: 18px 20px;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(11, 78, 101, 0.32),
+      rgba(3, 43, 63, 0.38)
+    );
+}
+
+.requirement-title {
+  margin-bottom: 12px;
+
+  color: rgba(182, 228, 241, 0.55);
+
+  font-size: 10px;
+  font-weight: 850;
+
+  letter-spacing: 2px;
+}
+
+.requirement-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.requirement-list span {
+  padding: 8px 12px;
+
+  border: 1px solid rgba(155, 219, 234, 0.12);
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  color: rgba(221, 240, 246, 0.58);
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.requirement-list span.active {
+  border-color: rgba(57, 210, 247, 0.25);
+
+  background: rgba(25, 174, 215, 0.1);
+
+  color: #6fe4ff;
+}
+
+/* =========================================================
+   PAYMENT + SAFETY STATUS
+   ========================================================= */
+
+.status-row {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+
+  margin: 18px 22px 0;
+}
+
+.status-box {
+  padding: 15px;
+
+  border: 1px solid rgba(100, 220, 244, 0.1);
+  border-radius: 15px;
+
+  background: rgba(0, 24, 40, 0.5);
+}
+
+.status-box span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: rgba(181, 223, 235, 0.48);
+
+  font-size: 10px;
+  font-weight: 850;
+
+  letter-spacing: 1.5px;
+}
+
+.status-box strong {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.status-box strong.confirmed {
+  color: #61e6ad;
+}
+
+.status-box strong.pending {
+  color: #ffd166;
+}
+
+/* =========================================================
+   TRIP FOOTER
+   ========================================================= */
+
+.trip-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 22px;
+
+  padding: 20px 25px;
+
+  border-top: 1px solid rgba(124, 218, 240, 0.1);
+
+  background: rgba(0, 20, 34, 0.3);
+}
+
+.trip-footer span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: rgba(183, 223, 234, 0.46);
+
+  font-size: 10px;
+  font-weight: 850;
+
+  letter-spacing: 1.4px;
+}
+
+.trip-footer strong {
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 850;
+}
+
+.amount-box {
+  text-align: right;
+}
+
+.amount-box strong {
+  color: #6ee5ff;
+
+  font-size: 21px;
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .dashboard-container {
+    width: min(92%, 760px);
+
+    padding-top: 40px;
+  }
+
+  .dashboard-header {
+    align-items: flex-start;
+  }
+
+  .dashboard-header h1 {
+    font-size: 48px;
+  }
+
+  .control-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .captain-search {
+    width: 100%;
+  }
+
+  .captain-search input {
+    flex: 1;
+    width: auto;
+  }
+
+  .trip-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .dashboard-container {
+    width: 92%;
+
+    padding: 30px 0 55px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .dashboard-label {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 38px;
+
+    letter-spacing: -1px;
+  }
+
+  .dashboard-header p {
+    font-size: 15px;
+  }
+
+  .captain-id-box {
+    width: 100%;
+
+    text-align: left;
+  }
+
+  .captain-id-box strong {
+    font-size: 25px;
+  }
+
+  .control-content {
+    padding: 22px;
+  }
+
+  .captain-search {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .captain-search input,
+  .captain-search button {
+    width: 100%;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .section-heading h2 {
+    font-size: 31px;
+  }
+
+  .trip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trip-card {
+    border-radius: 21px;
+  }
+
+  .trip-top {
+    flex-direction: column;
+
+    padding: 23px 20px 20px;
+  }
+
+  .trip-top h3 {
+    font-size: 23px;
+  }
+
+  .information-block {
+    margin-left: 15px;
+    margin-right: 15px;
+
+    padding: 16px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .requirements {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .status-row {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .trip-footer {
+    padding: 18px 18px;
+
+    gap: 15px;
+  }
+
+  .trip-footer strong {
+    font-size: 14px;
+  }
+
+  .amount-box strong {
+    font-size: 18px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .dashboard-header h1 {
+    font-size: 32px;
+  }
+
+  .trip-top h3 {
+    font-size: 20px;
+  }
+
+  .status-row {
+    grid-template-columns: 1fr;
+  }
+
+  .trip-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .amount-box {
+    text-align: left;
+  }
+}
