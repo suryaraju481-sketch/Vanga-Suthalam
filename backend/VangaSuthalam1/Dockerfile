@@ -6,7 +6,8 @@ COPY webapp/ /usr/local/tomcat/webapps/ROOT/
 
 COPY src/ /tmp/src/
 
-RUN mkdir -p /usr/local/tomcat/webapps/ROOT/WEB-INF/classes \
+RUN rm -rf /usr/local/tomcat/webapps/ROOT/WEB-INF/classes \
+    && mkdir -p /usr/local/tomcat/webapps/ROOT/WEB-INF/classes \
     && javac -cp "/usr/local/tomcat/lib/*:/usr/local/tomcat/webapps/ROOT/WEB-INF/lib/*" \
     -d /usr/local/tomcat/webapps/ROOT/WEB-INF/classes \
     $(find /tmp/src -name "*.java" ! -name "Test*.java")
