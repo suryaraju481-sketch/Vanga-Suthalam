@@ -6,19 +6,6 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
-    private static final String URL =
-            "jdbc:mysql://localhost:3306/vanga_suthalam_db"
-            + "?useSSL=false"
-            + "&serverTimezone=Asia/Kolkata"
-            + "&allowPublicKeyRetrieval=true";
-
-    private static final String USER = "root";
-
-    // PUT YOUR EXISTING MYSQL PASSWORD HERE
-
-    private static final String PASSWORD = System.getenv("VANGA_DB_PASSWORD");
-   
-
     public static Connection getConnection() throws SQLException {
 
         try {
@@ -30,10 +17,22 @@ public class DBConnection {
             );
         }
 
+        String host = System.getenv("DB_HOST");
+        String port = System.getenv("DB_PORT");
+        String database = System.getenv("DB_NAME");
+        String user = System.getenv("DB_USER");
+        String password = System.getenv("DB_PASSWORD");
+
+        String url =
+                "jdbc:mysql://" + host + ":" + port + "/" + database
+                + "?useSSL=false"
+                + "&serverTimezone=Asia/Kolkata"
+                + "&allowPublicKeyRetrieval=true";
+
         Connection con = DriverManager.getConnection(
-                URL,
-                USER,
-                PASSWORD
+                url,
+                user,
+                password
         );
 
         System.out.println("Database connection successfully.");
