@@ -11,6 +11,7 @@ public class DestinationDAO {
 
     // Add Destination
     public boolean addDestination(Destination destination) {
+        
 
         String sql = "INSERT INTO destinations "
                    + "(destination_name, location, destination_type, "
