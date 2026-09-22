@@ -94,7 +94,7 @@ function Login() {
 
     try {
       const response = await fetch(
-        "http://localhost:8090/VangaSuthalam1/api/customer/login",
+        "https://vanga-suthalam.onrender.com/api/customer/login",
         {
           method: "POST",
 
