@@ -2,8 +2,7 @@ import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./IslandApproval.css";
 
-const API_URL =
-  "http://localhost:8090/VangaSuthalam1/api/island-approval";
+const API_BASE = "https://vanga-suthalam.onrender.com";
 
 function IslandApproval() {
   const location = useLocation();
