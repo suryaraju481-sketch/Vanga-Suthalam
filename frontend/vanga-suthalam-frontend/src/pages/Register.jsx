@@ -146,7 +146,7 @@ function Register() {
       // =====================================================
 
       const response = await fetch(
-        "http://localhost:8090/VangaSuthalam1/api/customer/register",
+        "https://vanga-suthalam.onrender.com/api/customer/register",
         {
           method: "POST",
 
