@@ -16,6 +16,7 @@ import TripManagement from "./pages/TripManagement";
 import CaptainDashboard from "./pages/CaptainDashboard";
 import TripStatus from "./pages/TripStatus";
 import MyBookings from "./pages/MyBookings";
+import About from "./pages/About";
 
 
 function App() {
@@ -112,6 +113,8 @@ function App() {
 />
 
 <Route path="/my-bookings" element={<MyBookings />} />
+
+<Route path="/about" element={<About />} />
 
 
         
