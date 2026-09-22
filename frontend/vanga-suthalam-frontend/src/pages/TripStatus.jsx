@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./TripStatus.css";
 
-const API_BASE = "http://localhost:8090/VangaSuthalam1";
+const API_BASE = "https://vanga-suthalam.onrender.com";
 
 function TripStatus() {
   const location = useLocation();
