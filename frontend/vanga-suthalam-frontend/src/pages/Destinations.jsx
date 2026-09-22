@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Destinations.css";
 
 const API_URL =
-  "http://localhost:8090/VangaSuthalam1/api/destinations";
+  "https://vanga-suthalam.onrender.com/api/destinations";
 
 const Destinations = () => {
   const navigate = useNavigate();
