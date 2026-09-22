@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "./Payment.css";
 
 const PAYMENT_API_URL =
-  const API_URL = "https://vanga-suthalam.onrender.com/api/payments";
+  "https://vanga-suthalam.onrender.com/api/payments";
 
 function Payment() {
   const location = useLocation();
