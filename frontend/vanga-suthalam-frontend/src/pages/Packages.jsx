@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Packages.css";
 
 const API_URL =
-  "http://localhost:8090/VangaSuthalam1/api/packages";
+  "https://vanga-suthalam.onrender.com/api/packages";
 
 function Packages() {
   const location = useLocation();
