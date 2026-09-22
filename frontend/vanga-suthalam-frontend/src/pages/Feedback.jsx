@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Feedback.css";
 
 const FEEDBACK_API =
-  "http://localhost:8090/VangaSuthalam1/api/feedback";
+  "https://vanga-suthalam.onrender.com/api/feedback";
 
 const ratingItems = [
   {
