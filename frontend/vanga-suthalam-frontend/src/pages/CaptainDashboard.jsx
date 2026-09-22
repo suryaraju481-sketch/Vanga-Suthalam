@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./CaptainDashboard.css";
 
-const API_BASE = "http://localhost:8090/VangaSuthalam1";
+const API_BASE = "https://vanga-suthalam.onrender.com";
 
 function CaptainDashboard() {
   const [captainId, setCaptainId] = useState("1");
