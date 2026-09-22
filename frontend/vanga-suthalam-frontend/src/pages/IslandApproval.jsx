@@ -138,7 +138,9 @@ function IslandApproval() {
         formData.remarks.trim()
       );
 
-      const response = await fetch(API_URL, {
+     const response = await fetch(
+  `${API_BASE}/api/island-approval`,
+  {
         method: "POST",
         headers: {
           "Content-Type":
