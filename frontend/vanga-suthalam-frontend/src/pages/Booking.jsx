@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Booking.css";
 
-const API_BASE = "http://localhost:8090/VangaSuthalam1/api";
+const API_BASE = "https://vanga-suthalam.onrender.com/api/bookings";
 
 function Booking() {
   const location = useLocation();
