@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./SafetyVerification.css";
 
-const API_BASE = "http://localhost:8090/VangaSuthalam1";
+const API_BASE = "https://vanga-suthalam.onrender.com";
 
 function SafetyVerification() {
   const navigate = useNavigate();
